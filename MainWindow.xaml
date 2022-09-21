@@ -1,0 +1,37 @@
+﻿<Window x:Class="WpfNoSqlJasenRekisteriApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfNoSqlJasenRekisteriApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="624" Width="1109">
+    <Grid x:Name="btnLisaa">
+        <Button Content="Lisää käyttäjä" HorizontalAlignment="Left" Margin="64,107,0,0" VerticalAlignment="Top" Height="36" Width="120" Click="Button_Click"/>
+        <TextBox x:Name="txtEtu" HorizontalAlignment="Left" Margin="64,183,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="143" Height="23"/>
+        <TextBox x:Name="txtSuku" HorizontalAlignment="Left" Margin="65,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="27"/>
+        <TextBox x:Name="txtOsoite" HorizontalAlignment="Left" Margin="65,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="28"/>
+        <TextBox x:Name="txtPostnum" HorizontalAlignment="Left" Margin="65,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="23"/>
+        <TextBox x:Name="txtPuh" HorizontalAlignment="Left" Margin="65,387,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="23"/>
+        <TextBox x:Name="txtSposti" HorizontalAlignment="Left" Margin="65,435,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="35"/>
+        <TextBox x:Name="txtAlkuPvm" HorizontalAlignment="Left" Margin="65,495,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="23"/>
+        <Label Content="Etunimi&#xD;&#xA;" HorizontalAlignment="Left" Margin="65,153,0,0" VerticalAlignment="Top" Width="72" Height="25"/>
+        <Label Content="Sukunimi&#xA;" HorizontalAlignment="Left" Margin="63,206,0,0" VerticalAlignment="Top" Width="72" Height="25"/>
+        <Label Content="Osoite&#xD;&#xA;" HorizontalAlignment="Left" Margin="65,258,0,0" VerticalAlignment="Top" Width="72" Height="25"/>
+        <Label Content="Postinumero&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="65,315,0,0" VerticalAlignment="Top" Width="82" Height="24"/>
+        <Label Content="Puhelin&#xA;" HorizontalAlignment="Left" Margin="63,362,0,0" VerticalAlignment="Top" Width="72" Height="25"/>
+        <Label Content="Sähköposti&#xA;" HorizontalAlignment="Left" Margin="64,410,0,0" VerticalAlignment="Top" Width="72" Height="25"/>
+        <Label Content="AlkuPvm&#xA;" HorizontalAlignment="Left" Margin="65,470,0,0" VerticalAlignment="Top" Width="72" Height="25"/>
+        <TextBox x:Name="txtJasenet" HorizontalAlignment="Left" Margin="212,153,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="743" Height="365"/>
+        <Button x:Name="btnTulosta" Content="Tulosta Käyttäjä" HorizontalAlignment="Left" Margin="543,65,0,0" VerticalAlignment="Top" Height="36" Width="120" Click="btnTulosta_Click"/>
+        <Button x:Name="btnDelete" Content="Poista käyttäjä" HorizontalAlignment="Left" Margin="543,15,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="Button_Click_1"/>
+        <Label Content="PartitionKey&#xD;&#xA;" HorizontalAlignment="Left" Margin="543,101,0,0" VerticalAlignment="Top"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="676,77,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtFindByName" HorizontalAlignment="Left" Margin="543,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="23"/>
+        <TextBox x:Name="txtID" HorizontalAlignment="Left" Margin="676,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="279" Height="46"/>
+        <Button x:Name="btnGetDb" Content="Hae dokumentit" HorizontalAlignment="Left" Margin="212,107,0,0" VerticalAlignment="Top" Height="36" Width="120" Click="btnGetDb_Click"/>
+        <Button x:Name="btnMuokkaa" Content="Muokkaa käyttäjää" HorizontalAlignment="Left" Margin="65,65,0,0" VerticalAlignment="Top" Height="35" Width="119" Click="btnMuokkaa_Click"/>
+        <Button x:Name="btnNollaa" Content="Nollaa kentät" HorizontalAlignment="Left" Margin="212,65,0,0" VerticalAlignment="Top" Height="35" Width="120" Click="btnNollaa_Click"/>
+
+    </Grid>
+</Window>
