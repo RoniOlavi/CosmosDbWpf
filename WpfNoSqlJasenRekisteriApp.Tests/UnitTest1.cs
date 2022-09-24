@@ -17,14 +17,15 @@ namespace WpfNoSqlJasenRekisteriApp.Tests
         [TestMethod]
         public void TestGetDocuments()
         {
+            //Arrange
             Uri uri = new Uri(EndpointUri);
             DocumentClient client = new DocumentClient(uri, PrimaryKey);
-            //Arrange
             Uri kokoelmaUrl = UriFactory.CreateDocumentCollectionUri("ToDoList", "Items");
+            //Act
             var queryable = client.CreateDocumentQuery<Jasen>(kokoelmaUrl, new FeedOptions { MaxItemCount = 100 }).Where(b => b.PartitionKey > 0).AsDocumentQuery();
             var results = queryable.HasMoreResults;
             var total = client.CreateDocumentQuery<Jasen>(kokoelmaUrl, "SELECT * FROM C").ToList();
-            //Act
+            //Assert
             if (results == false)
             {
                 throw new Exception("Ei hakenut dokumenttia kannasta");
@@ -77,9 +78,9 @@ namespace WpfNoSqlJasenRekisteriApp.Tests
             //Arrange
             Uri uri = new Uri(EndpointUri);
             DocumentClient client = new DocumentClient(uri, PrimaryKey);
-            //Act
             string id = "123456";
             int avain = 123;
+            //Act
             Uri dokumenttiUrl = UriFactory.CreateDocumentUri("ToDoList", "Items", id);
             _ = await client.DeleteDocumentAsync(dokumenttiUrl,
                 new RequestOptions { PartitionKey = new PartitionKey(avain) });
